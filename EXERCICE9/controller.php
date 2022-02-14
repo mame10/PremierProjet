@@ -1,0 +1,21 @@
+<?php
+session_start();
+include_once("fonction.php");
+include_once("../fonctions.php");
+
+if(isset($_POST["btn"])){
+  $nombre=$_POST["nbre"];
+  $_SESSION['post']=$_POST;
+  $error=[];
+  nombreValide($nombre,'nbre',$error);
+  if(count($error)==0){
+      multiplication($nombre);
+  }else{
+    $_SESSION['sess']=$error;
+    header('location:index.php');
+    exit();
+    }
+}else{
+header('loaction:index.php');
+exit();
+}

@@ -1,0 +1,29 @@
+#formu{
+    align-items: center;
+    justify-content: center;
+    width: 30em;
+    height: 15em;
+    border: teal solid 0.2em;
+    background-color: lightblue;
+}
+body{
+    margin: 5em auto auto 28em; 
+    overflow: hidden;
+}
+
+input{
+    width: 6em;
+    height: 2em;
+}
+
+#dat{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+label{
+    font-size: 2em;
+}
+span{
+    color: red;
+}
+
